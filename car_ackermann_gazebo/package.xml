@@ -1,0 +1,22 @@
+<package>
+  <name>car_ackermann_gazebo</name>
+  <version>0.0.0</version>
+  <description>rrbot_gazebo</description>
+  <maintainer email="hugo.reubrecht@ensta-bretagne.org">Hugo Reubrecht</maintainer>
+
+  <license>BSD</license>
+
+  <author email="hugo.reubrecht@ensta-bretagne.org">Hugo Reubrecht</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>gazebo_plugins</run_depend>
+  <run_depend>gazebo_ros</run_depend>
+  <run_depend>gazebo_ros_control</run_depend>
+  <run_depend>car_ackermann_control</run_depend>
+  <run_depend>car_ackermann_description</run_depend>
+  <run_depend>xacro</run_depend>
+
+  <export>
+  </export>
+</package>
