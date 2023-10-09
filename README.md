@@ -17,3 +17,4 @@ Launch teleop_twist_keyboard (install it if necessary)
 ```
 rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=robot_command
 ```
+Edit : the steering control is not perfect yet need to adapt some joints on the URDF model
