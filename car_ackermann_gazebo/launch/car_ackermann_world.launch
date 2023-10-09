@@ -26,6 +26,13 @@
     args="-urdf -model car_ackermann -param robot_description"/>
 
   <!-- ros_control car_ackermann launch file -->
-  <!--include file="$(find car_ackermann_control)/launch/car_ackermann_control.launch" /-->
+  <include file="$(find car_ackermann_control)/launch/car_ackermann_control.launch" >
+  </include>
+
+  <include file="$(find car_ackermann_teleop_to_control)/launch/controller.launch" >
+  </include>
+
+  <!-- Show in Rviz  -->
+  <node name="rviz" pkg="rviz" type="rviz" args="-d $(find car_ackermann_description)/launch/lidar_ackermann.rviz"/> 
 
 </launch>

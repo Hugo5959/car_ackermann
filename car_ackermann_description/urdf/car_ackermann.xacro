@@ -2,15 +2,6 @@
 <!-- Revolute-Revolute Manipulator -->
 <robot name="car_ackermann" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <!-- Constants for robot dimensions -->
-  <xacro:property name="PI" value="3.1415926535897931"/>
-  <xacro:property name="mass" value="1" /> <!-- arbitrary value for mass -->
-  <xacro:property name="width" value="0.1" /> <!-- Square dimensions (widthxwidth) of beams -->
-  <xacro:property name="height1" value="2" /> <!-- Link 1 -->
-  <xacro:property name="height2" value="1" /> <!-- Link 2 -->
-  <xacro:property name="height3" value="1" /> <!-- Link 3 -->
-  <xacro:property name="axel_offset" value="0.05" /> <!-- Space btw top of beam and the each joint -->
-
   <!-- Physical Constant Macros -->
   <xacro:property name="M_PI" value="3.1415926535897931" />
   <!-- Dimension Macros -->
@@ -24,7 +15,6 @@
   <xacro:include filename="$(find car_ackermann_description)/urdf/car_ackermann.gazebo" />
   <!-- Import Rviz colors -->
   <xacro:include filename="$(find car_ackermann_description)/urdf/materials.xacro" />
-
 
   <!-- Main body -->
     <link name="base_link">
