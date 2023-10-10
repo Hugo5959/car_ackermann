@@ -24,6 +24,8 @@ int main(int argc, char **argv)
   ros::Subscriber sub_command = n.subscribe("/robot_command", 1000, chatterCallback);
   ros::Publisher pub_linear  = n.advertise<geometry_msgs::Twist>("/cmd_vel", 1000);
   ros::Publisher pub_angular = n.advertise<std_msgs::Float64>("/car_ackermann/steer_joint_position_controller/command", 1000);
+  ros::Publisher pub_angular1 = n.advertise<std_msgs::Float64>("/car_ackermann/front_left_bar_joint_position_controller/command", 1000);
+  ros::Publisher pub_angular2 = n.advertise<std_msgs::Float64>("/car_ackermann/front_right_bar_joint_position_controller/command", 1000);
   
   ros::Rate loop_rate(10);
 
@@ -38,6 +40,8 @@ int main(int argc, char **argv)
     
     pub_linear.publish(msg_linear);
     pub_angular.publish(msg_angular);
+    pub_angular1.publish(msg_angular);
+    pub_angular2.publish(msg_angular);
 
     ros::spinOnce();
 

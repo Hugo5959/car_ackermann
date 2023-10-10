@@ -6,7 +6,9 @@
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
 	output="screen" ns="/car_ackermann" args="joint_state_controller
-					  steer_joint_position_controller"/>
+					                                  steer_joint_position_controller
+                                            front_left_bar_joint_position_controller
+                                            front_right_bar_joint_position_controller"/>
 
   <!-- convert joint states to TF transforms for rviz, etc -->
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"
